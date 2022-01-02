@@ -26,64 +26,64 @@
 # Messages related to channels
 # -------------------------------------------------------------------------------------------------
 Channels: 
-  Disabled: "&cChannels are disabled. Set Channels.Enabled to true in settings.yml to enable."
-  Disabled_World: "&cChannels are not enabled on '{0}' world."
-  No_Channels: "&cThere are no channels. Add some in Channels.List in settings.yml."
-  No_Channel: "No such channel: '{0}'. Available: {1}"
-  Available: " &fAvailable: &7"
-  Header: "Channels"
+  Disabled: "&cKanavat ovat pois käytöstä. Aseta Channels.Enabled arvoon 'true' settings.yml tiedostossa laittaaksesi sen käyttöön."
+  Disabled_World: "&cKanat eivät ole käytössä '{0}' maassa."
+  No_Channels: "&cKanavia ei ole. Lisää niitä kohtaan Channels.List settings.yml tiedostossa."
+  No_Channel: "Ei kanavaa nimeltä: '{0}'. Saatavilla on: {1}"
+  Available: " &fSaatavilla: &7"
+  Header: "Kanavat"
   Header_Alternative:
-  - "&cChannels: &7You are in channels: {0}"
+  - "&cKanavat: &7Olet kanavoissa: {0}"
   Header_Alternative_Channel: "{channel} ({mode})"
   Use_Alternative_Header: false
-  Tooltip_Joined: "&fYou are joined in this channel."
-  Tooltip_Join_Write: "&2Click to join this channel for writing."
-  Tooltip_Join_Read: "&2Click to join this channel for reading."
+  Tooltip_Joined: "&fOlet liitetty tähän kanavaan."
+  Tooltip_Join_Write: "&2Klikkaa liittyäksesi kanavaan kirjoittamista varten."
+  Tooltip_Join_Read: "&2Klikkaa liittyäksesi kanavaan lukemista varten."
   Tooltip_Leave_Write:
   - ""
-  - "&6Notice: &fYou will automatically leave"
-  - "&fyour old write channel '{0}'."
-  Tooltip_Channels: " &fYour channels:"
-  Tooltip_Leave: "&cClick to leave"
+  - "&6Muistutus: &fSinä automaattisesti lähdet pois"
+  - "&fsinun vanhasta kirjoittamiskanavasta '{0}'."
+  Tooltip_Channels: " &fSinun kanavat:"
+  Tooltip_Leave: "&cLähde pois klikkaamalla"
   
   Join:
-    Usage: "<channel> [mode] [player]"
-    Description: "Join a chat channel."
+    Usage: "<kanava> [tila] [pelaaja]"
+    Description: "Liity puhekanavaan."
     Usages_Self: 
-    - "/{label} {sublabel} <channel> &7- Join channel for writing."
-    - "/{label} {sublabel} <channel> <mode> &7- Join channel for mode."
+    - "/{merkki} {alimerkki} <kanava> &7- Liity kanavaan tilalla."
+    - "/{merkki} {alimerkki} <kanava> <tila> &7- Liity kanavaan tilalla."
     Usages_Others: 
-    - "/{label} {sublabel} <channel> <mode> [player] &7- Join player to channel for mode."
+    - "/{merkki} {alimerkki} <kanava> <tila> [pelaaja] &7- Liitä pelaaja kanavaan tilalla."
     Usages_2: 
     - ""
-    - "&cNote: Joining player will leave old channel(s) if over limit."
+    - "&cMuista: Liittyvä pelaaja lähtee pois yhdestä tai monesta jos menee ylirajan."
     - ""
-    - "&cWarning: Give players chatcontrol.channel.join.{channel}.{mode}"
-    - "&cpermission for the relevant channel and mode (read or write)"
-    - "&cotherwise we will kick them out of channel when they join."
-    Already_Connected: "(self ? 'You are' : 'Player is') + ' already joined in this channel in {0} mode.'"
-    Read_Disabled: "Joining channels for reading has been disabled."
-    Leave_Reading_You: " You left reading &o{0}&7 channel(s) over limit."
-    Leave_Reading_Other: " {target} left reading &o{0}&7 channel(s) over limit."
-    Switch_Success: "Switched mode for channel &o{0} &7from {1} to {2}."
-    Success: "Joined &o{0} &7channel in {1} mode."
-    Notification: "&8[&2+&8] &7Player {player} has joined '{channel}' channel."
+    - "&cVaroitus: Anna pelaajille chatcontrol.channel.join.{kanava}.{tila}"
+    - "&cpermission noden asiaankuuluvalle kanavalle ja tilalle (kirjoitus- tai lukemiskanava)"
+    - "&cmuuten poistamme hänet pois kanavasta, kun he liittyvät."
+    Already_Connected: "(self ? 'Sinä olet' : 'Pelaaja on') + ' jo liittyi tähän kanavaan {0} tilassa.'"
+    Read_Disabled: "Lukemiskanavoihin liittyminen on pois käytöstä."
+    Leave_Reading_You: " Sinä lähdit kirjoittamis &o{0}&7 kanavista yli rajaksi."
+    Leave_Reading_Other: " {target} poistui lukemis &o{0}&7 kanavoista yli rajaksi."
+    Switch_Success: "Tila vaihdettu kanavalle &o{0} &7tilasta {1} tilaan {2}."
+    Success: "Liitytty &o{0} &7kanavaan tilassa {1}."
+    Notification: "&8[&2+&8] &7Pelaaja {player} liittyi '{channel}' kanavaan."
     
   Leave:
-    Usage: "<channel> [player]"
-    Description: "Leave a chat channel."
+    Usage: "<kanava> [pelaaja]"
+    Description: "Poistu puhekanavasta."
     Usages_Self: 
-    - "/{label} {sublabel} <channel> &7- Leave chat channel."
+    - "/{merkki} {alimerkki} <kanava> &7- Poistu puhekanavasta."
     Usages_Others: 
-    - "/{label} {sublabel} <channel> <player> &7- Force player to leave channel."
-    Not_Joined: "(self ? 'You are' : '{0} is') + ' not joined in this channel. ' + (channelsPlayerCanLeave.isEmpty() ? 'There are no channels ' + (self ? 'you' : 'player') + ' can leave.' : (self ? 'You' : 'Player') + ' can leave channels: {1}')"
-    No_Channels: "(self ? 'You have' : 'Player has') + ' no channels to leave.'"
-    Switch_To_Reading_V2: "(self ? 'You' : '{target}') + ' switched the &o{0} &7channel to reading. Type the command again to leave.'"
-    Success_V2: " (self ? 'You' : '{target}') + ' left the &o{0} &7channel.'"
-    Notification: "&8[&4-&8] &7Player {player} has left '{channel}' channel."
+    - "/{merkki} {alimerkki} <kanava> <pelaaja> &7- Pakota pelaaja lähtemään pois kanavasta."
+    Not_Joined: "(self ? 'Sinä et' : '{0} ei') + ' ole liittynyt tähän kanavaan. ' + (channelsPlayerCanLeave.isEmpty() ? 'Kanavia ei ole ' + (self ? 'josta sinä' : 'josta pelaaja') + ' pystyisi lähteä.' : (self ? 'Sinä pystyt' : 'Pelaaja pystyy') + ' lähteä pois kanavista: {1}')"
+    No_Channels: "(self ? 'Sinulla ei' : 'Pelaajalla ei') + ' ole kanavia josta voisi lähteä.'"
+    Switch_To_Reading_V2: "(self ? 'Sinä vaihdoit' : '{target} vaihtoi') + ' kanavan &o{0} &7lukemiskanavaan. Kirjoita komento uudestaan lähteääksesi pois.'"
+    Success_V2: " (self ? 'Sinä lähdit' : '{target} lähti') + ' pois kanavasta &o{0}'"
+    Notification: "&8[&4-&8] &7Pelaaja {player} lähti '{channel}' kanavalta pois."
   
   Set: 
-    Usage: "<channel> <mode/none> <player>"
+    Usage: "<Kanava> <mode/none> <player>"
     Description: "Set or unset a channel for player, bypassing max read limits."
     Success: "Set {0} channel for {1} to {2} mode."
     Success_Remove: "Remove {0} channel from {1}."
@@ -990,56 +990,56 @@ Menu:
     Type_Anvil: "items when they are renamed"  
     Button_Toggle_Lore:
     - ""
-    - "Click to toggle spying on"
+    - "Klikkaa vaihtaaksesi kurkkimistilaa"
     - "{label}."
     - ""
     - "Status: {status}"
     Status: "(spying ? '&bspying' : '&cdisabled')"
-    Status_Toggle: "(isSpying ? '&4' : '&2') + 'Spying {type} ' + (isSpying ? 'disabled' : 'enabled') + '!'"
+    Status_Toggle: "(isSpying ? '&4' : '&2') + 'Kurkkiminen {type}:miselle ' + (isSpying ? 'on nyt pois käytöstä' : 'on nyt käytössä') + '!'"
     Channels_Toggle_Lore:
     - ""
-    - "Click to toggle spying"
-    - "for this channel."
+    - "Klikkaa vaihtaaksesi"
+    - "kurkkimistilaa tälle kanavalle."
     - ""
     - "Status: {status}"
-    Channels_Toggle: "(isSpying ? '&4No longer spying channel' : '&2Now spying channel') + '!'"
+    Channels_Toggle: "(isSpying ? '&4Et enää kurki kanavaa' : '&2Nyt kurkit kanavaa') + '!'"
     Help:
-    - "Select what aspects of your server"
-    - "you want to spy on. You can also use"
-    - "the '/{label} log' command to view"
-    - "historical data from when you were gone."
+    - "Valitse mistä näkökohdista"
+    - "joihin sinä haluat kurkkia. Voit myös käyttää"
+    - "'/{label} log' komentoa nähdäkseen"
+    - "historiallista dataa, kun olit poissa."
     
   
 # -------------------------------------------------------------------------------------------------
 # Messages related to tools
 # -------------------------------------------------------------------------------------------------
 Tool:
-  Error: "&cOups! There was a problem with this tool! Please contact the administrator to review the console for details."
+  Error: "&cHuppista! Tällä työkalulla oli joku probleema! Ota yhteyttä ylläpitäjöihiin katsoakseen konsolista virheitä."
 
 # -------------------------------------------------------------------------------------------------
 # Messages related to checking messages/chat/signs etc. against spam, rules and so on
 # -------------------------------------------------------------------------------------------------
 Checker:
-  Chat_Exploit_Disallowed: "Your message contained code execution and was disallowed."
-  Sign_Duplication: "Do not place multiple signs with the same text."
-  Move: "'Please move before typing ' + (chat ? 'into chat' : 'commands') + '.'"
-  Delay_After_Join: "'Please wait {seconds} before typing ' + (chat ? 'messages' : 'commands') + '.'"
-  Delay: "'Please wait {seconds} before your next ' + (chat ? 'message' : 'command') + '.'"
-  Similarity: "'Please do not ' + (chat ? 'type messages' : 'run commands') + ' that are {similarity}% similar.'"
-  Period: "You can only send {type_amount} {type} in {period_amount} {period}."
-  Caps: "Please avoid excessive capitalization in your {type}."
-  Sound_Notify: "&cYou cannot use sound notify for another {seconds}."
-  Parrot: "You cannot repeat '{0}' since it's {1}% similar to what was said in the last {2}."
-  No_Text: "You cannot send chat messages without text!"
-  No_Text_After_Change: "Your message has been edited and cannot be sent because it is now empty."
+  Chat_Exploit_Disallowed: "Sinun viestissä sisältyi koodia ja oli estetty."
+  Sign_Duplication: "Älä laita monta kylttiä samalla sisällöllä."
+  Move: "'Liiku ennen kuin kirjoitat ' + (chat ? 'chattiin' : 'komentoja') + ', kiitos.'"
+  Delay_After_Join: "'Odota {seconds} ennen kuin kirjoitat ' + (chat ? 'viestejä' : 'komentoja') + ', kiitos.'"
+  Delay: "'Odota {seconds} ennen sinun seuraavaa ' + (chat ? 'viestiä' : 'komentoa') + ', kiitos.'"
+  Similarity: "'Älä ' + (chat ? 'kirjoita viestejä' : 'käytä komentoja') + ' jotka ovat {similarity}% samanlaisia, kiitos.'"
+  Period: "Pystyt vain lähettää {type_amount} {type}, {period_amount}:tin ja {period}:in sisällä."
+  Caps: "Vältä liiallista suurmerkin käyttöä sinun {type}, kiitos."
+  Sound_Notify: "&cEt voi käyttää ääni ilmoittamista {seconds} aikaan."
+  Parrot: "Et voi toistaa '{0}' koska se on {1}% samanlainen kuin mitä sanottiin viime {2}."
+  No_Text: "Et voi lähettää viestejä, jos ne ovat tyhjiä!"
+  No_Text_After_Change: "Sinun viesti on muokattu ja sitä ei pysty enää lähettää, sillä se on nyt tyhjä."
 
 # -------------------------------------------------------------------------------------------------
 # Words for both singular and plural form. Separate these two forms with ", "
 # -------------------------------------------------------------------------------------------------
 Cases:
-  Second: second, seconds
-  Message: message, messages
-  Command: command, commands
+  Second: sekuntti, sekunnit
+  Message: viesti, viestit
+  Command: komento, komennot
  
 # -------------------------------------------------------------------------------------------------
 # Different prefixes you can use by calling {prefix_<type>} such as {prefix_info}
@@ -1055,32 +1055,32 @@ Prefix:
 # -------------------------------------------------------------------------------------------------
 # Miscellaneous
 # -------------------------------------------------------------------------------------------------
-You: "You"
-Your: "Your"
-His: "His"
-And: "and" 
-None: "None"
-Server: "server"
-Channel: "channel"
-False_Value: "false"
-Server_Prefix: "[Server]"
-Console_Name: "Console"
+You: "Sinä"
+Your: "Sinun"
+His: "Hänen"
+And: "ja" 
+None: "Yhtään"
+Server: "palvelin"
+Channel: "kanava"
+False_Value: "epätodellinen"
+Server_Prefix: "[Palvelin]"
+Console_Name: "Konsoli"
 
 # -------------------------------------------------------------------------------------------------
 # Database related messages
 # -------------------------------------------------------------------------------------------------
-Data_Missing: "&c{name} lacks database information! Please only create {type} in-game! Skipping.."
-Data_Loading: "Database is currently loading data, please wait..."
+Data_Missing: "&c{name}:ltä puuttuu tietokanta tietoja! Luo vain {type} pelin sisällä, kiitos! Ohitetaan.."
+Data_Loading: "Tietokanta lataa tietoja, odota hetki..."
 
 # -------------------------------------------------------------------------------------------------
 # Messages shown when player runs a command he lacks permission for
 # -------------------------------------------------------------------------------------------------
-No_Permission: "&cNo permission: {permission}" 
+No_Permission: "&cEi lupaa: {permission}" 
 
 # -------------------------------------------------------------------------------------------------
 # Shown when console tries to enter a server conversation
 # -------------------------------------------------------------------------------------------------
-Conversation_Requires_Player: "Only players may enter this conversation."
+Conversation_Requires_Player: "Vain pelaajana pystyy päästä tähän keskusteluun."
 
 # -------------------------------------------------------------------------------------------------
 # Internal versioning number
