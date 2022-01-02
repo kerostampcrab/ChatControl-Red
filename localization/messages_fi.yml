@@ -27,7 +27,7 @@
 # -------------------------------------------------------------------------------------------------
 Channels: 
   Disabled: "&cKanavat ovat pois käytöstä. Aseta Channels.Enabled arvoon 'true' settings.yml tiedostossa laittaaksesi sen käyttöön."
-  Disabled_World: "&cKanat eivät ole käytössä '{0}' maassa."
+  Disabled_World: "&cKanavat eivät ole käytössä '{0}' maassa."
   No_Channels: "&cKanavia ei ole. Lisää niitä kohtaan Channels.List settings.yml tiedostossa."
   No_Channel: "Ei kanavaa nimeltä: '{0}'. Saatavilla on: {1}"
   Available: " &fSaatavilla: &7"
